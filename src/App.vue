@@ -1,11 +1,10 @@
 <template>
+  <HeaderView />
   <router-view />
 </template>
 
-<script>
-export default {
-  name: "App",
-};
+<script setup>
+import HeaderView from "./components/HeaderView.vue";
 </script>
 
 <style>

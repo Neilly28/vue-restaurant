@@ -5,96 +5,27 @@
       "email": "neilpilarca@gmail.com",
       "password": "neil1234",
       "id": 1
+    }
+  ],
+
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Delicious Bites",
+      "contact": "+1 (123) 456-7890",
+      "address": "123 Main Street, Cityville, USA"
     },
     {
-      "email": "dsad",
-      "password": "addd",
-      "name": "dsad",
-      "id": 2
+      "id": 2,
+      "name": "Tasty Treats",
+      "contact": "+1 (987) 654-3210",
+      "address": "456 Elm Avenue, Townsville, USA"
     },
     {
-      "email": "dasdd",
-      "password": "dddd",
-      "name": "dsad",
-      "id": 3
-    },
-    {
-      "email": "aaaa",
-      "password": "aaa",
-      "name": "aaaa",
-      "id": 4
-    },
-    {
-      "email": "ccc",
-      "password": "ccc",
-      "name": "ccc",
-      "id": 5
-    },
-    {
-      "email": "dasd",
-      "password": "dasdsd",
-      "name": "dsad",
-      "id": 6
-    },
-    {
-      "email": "",
-      "password": "",
-      "name": "",
-      "id": 7
-    },
-    {
-      "email": "bbb",
-      "password": "bbb",
-      "name": "bbb",
-      "id": 8
-    },
-    {
-      "email": "sss",
-      "password": "sss",
-      "name": "sss",
-      "id": 9
-    },
-    {
-      "email": "sss",
-      "password": "sss",
-      "name": "sss",
-      "id": 10
-    },
-    {
-      "email": "ssccc",
-      "password": "cccc",
-      "name": "sss",
-      "id": 11
-    },
-    {
-      "email": "ss",
-      "password": "aaa",
-      "name": "ss",
-      "id": 12
-    },
-    {
-      "email": "xx",
-      "password": "xxx",
-      "name": "xxx",
-      "id": 13
-    },
-    {
-      "email": "ccc",
-      "password": "cc",
-      "name": "ccc",
-      "id": 14
-    },
-    {
-      "email": "",
-      "password": "",
-      "name": "",
-      "id": 15
-    },
-    {
-      "email": "",
-      "password": "",
-      "name": "",
-      "id": 16
+      "id": 3,
+      "name": "Savory Delights",
+      "contact": "+1 (555) 123-4567",
+      "address": "789 Oak Road, Villageland, USA"
     }
   ]
 }
