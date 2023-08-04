@@ -1,14 +1,16 @@
 <template>
   <div>
-    <h1 class="text-5xl font-bold mt-12 mb-8">
-      Start learning with one of our top teachers!
-    </h1>
-    <p class="text-lg mb-24">
-      There isn't a single way to teach a language. Book a regular lesson or a
-      trial lessons to get an introduction to a teacher's style. We have
-      teachers who specialize in teaching the foundations of German all the way
-      to advanced topics.
-    </p>
+    <div class="text-center">
+      <h1 class="text-5xl font-bold mt-12 mb-8">
+        Start learning with one of our top teachers!
+      </h1>
+      <p class="text-lg mb-24">
+        There isn't a single way to teach a language. Book a regular lesson or a
+        trial lessons to get an introduction to a teacher's style. We have
+        teachers who specialize in teaching the foundations of German all the
+        way to advanced topics.
+      </p>
+    </div>
 
     <div class="flex flex-col items-center justify-center gap-4">
       <input

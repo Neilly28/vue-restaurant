@@ -2,7 +2,7 @@
   <div>
     <div class="text-center">
       <h1 class="text-4xl font-bold mt-12 mb-4">
-        Do you want to become a teacher on Vue-lang?
+        Do you want to become a teacher on SpeakVue?
       </h1>
       <p class="text-lg mb-12">
         Complete the teacher application below. Once you are accepted, students
