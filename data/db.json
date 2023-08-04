@@ -47,7 +47,8 @@
       "language": "German",
       "price": 9,
       "about": "I am originally from a small village in Austria and have always been fascinated by languages and cultures. I came across my calling as a teacher by coincidence when I was volunteering to teach German to refugees in 2017. Since then, I have gained extensive experience as a German teacher at language schools and in private lessons.",
-      "image": "https://randomuser.me/api/portraits/women/28.jpg"
+      "image": "https://randomuser.me/api/portraits/women/28.jpg",
+      "professional": true
     },
     {
       "id": 2,
@@ -56,7 +57,8 @@
       "language": "Spanish",
       "price": 10,
       "about": "As a native Spanish speaker, I am enthusiastic about sharing my language and culture. I use interactive activities and games to make learning Spanish enjoyable and effective.",
-      "image": "https://randomuser.me/api/portraits/women/2.jpg"
+      "image": "https://randomuser.me/api/portraits/women/2.jpg",
+      "professional": true
     },
     {
       "id": 3,
@@ -65,7 +67,8 @@
       "language": "French",
       "price": 11.5,
       "about": "I believe that learning French should be an immersive experience. I emphasize conversational skills and introduce students to the delights of French cuisine and culture.",
-      "image": "https://randomuser.me/api/portraits/women/3.jpg"
+      "image": "https://randomuser.me/api/portraits/women/3.jpg",
+      "professional": true
     },
     {
       "id": 4,
@@ -74,7 +77,8 @@
       "language": "Spanish",
       "price": 10.5,
       "about": "With several years of teaching experience, I prioritize teaching Spanish grammar and helping students communicate effectively in everyday situations.",
-      "image": "https://randomuser.me/api/portraits/men/1.jpg"
+      "image": "https://randomuser.me/api/portraits/men/1.jpg",
+      "professional": true
     },
     {
       "id": 5,
@@ -83,7 +87,8 @@
       "language": "French",
       "price": 12,
       "about": "I am passionate about French literature and culture, and I incorporate literary works into my lessons to deepen language understanding and appreciation.",
-      "image": "https://randomuser.me/api/portraits/women/4.jpg"
+      "image": "https://randomuser.me/api/portraits/women/4.jpg",
+      "professional": false
     },
     {
       "id": 6,
@@ -92,7 +97,8 @@
       "language": "German",
       "price": 10,
       "about": "I specialize in preparing students for German language exams, offering comprehensive lessons that cover all aspects of the exam and boost confidence.",
-      "image": "https://randomuser.me/api/portraits/men/2.jpg"
+      "image": "https://randomuser.me/api/portraits/men/2.jpg",
+      "professional": true
     },
     {
       "id": 7,
@@ -101,7 +107,8 @@
       "language": "Spanish",
       "price": 11,
       "about": "As a native speaker from Argentina, I teach Latin American Spanish and provide insights into the region's diverse cultures and traditions.",
-      "image": "https://randomuser.me/api/portraits/women/5.jpg"
+      "image": "https://randomuser.me/api/portraits/women/5.jpg",
+      "professional": true
     },
     {
       "id": 8,
@@ -110,7 +117,8 @@
       "language": "French",
       "price": 12.5,
       "about": "Having worked in the business sector, I offer French lessons tailored for professionals, covering business vocabulary, etiquette, and communication.",
-      "image": "https://randomuser.me/api/portraits/men/3.jpg"
+      "image": "https://randomuser.me/api/portraits/men/3.jpg",
+      "professional": false
     },
     {
       "id": 9,
@@ -119,7 +127,8 @@
       "language": "German",
       "price": 9.5,
       "about": "I believe in learning German through conversation and cultural immersion. My lessons include discussions on various topics to improve speaking skills.",
-      "image": "https://randomuser.me/api/portraits/women/6.jpg"
+      "image": "https://randomuser.me/api/portraits/women/6.jpg",
+      "professional": false
     },
     {
       "id": 10,
@@ -128,7 +137,8 @@
       "language": "Spanish",
       "price": 12,
       "about": "I have a background in Hispanic literature and love sharing literary gems with my students to deepen their understanding of Spanish language and culture.",
-      "image": "https://randomuser.me/api/portraits/men/4.jpg"
+      "image": "https://randomuser.me/api/portraits/men/4.jpg",
+      "professional": true
     },
     {
       "id": 11,
@@ -137,7 +147,8 @@
       "language": "French",
       "price": 10.5,
       "about": "I place a strong emphasis on correct pronunciation and phonetics in French, which helps students develop a natural and authentic accent.",
-      "image": "https://randomuser.me/api/portraits/women/7.jpg"
+      "image": "https://randomuser.me/api/portraits/women/7.jpg",
+      "professional": true
     },
     {
       "id": 12,
@@ -146,7 +157,8 @@
       "language": "German",
       "price": 11,
       "about": "I have been teaching German to students of all levels for more than 7 years. My approach involves interactive exercises and real-life scenarios.",
-      "image": "https://randomuser.me/api/portraits/men/5.jpg"
+      "image": "https://randomuser.me/api/portraits/men/5.jpg",
+      "professional": true
     },
     {
       "id": 13,
@@ -155,7 +167,8 @@
       "language": "Spanish",
       "price": 10,
       "about": "I believe in immersive language learning, and my lessons include cultural activities and conversations to enhance language proficiency.",
-      "image": "https://randomuser.me/api/portraits/women/8.jpg"
+      "image": "https://randomuser.me/api/portraits/women/8.jpg",
+      "professional": true
     },
     {
       "id": 14,
@@ -164,7 +177,8 @@
       "language": "French",
       "price": 11.5,
       "about": "I have been teaching French to students of all ages, from children to adults. My lessons are engaging, interactive, and tailored to individual needs.",
-      "image": "https://randomuser.me/api/portraits/men/6.jpg"
+      "image": "https://randomuser.me/api/portraits/men/6.jpg",
+      "professional": true
     },
     {
       "id": 15,
@@ -173,7 +187,8 @@
       "language": "German",
       "price": 12.5,
       "about": "For advanced learners, I focus on complex grammar structures, advanced vocabulary, and discussions on various topics to further language proficiency.",
-      "image": "https://randomuser.me/api/portraits/women/9.jpg"
+      "image": "https://randomuser.me/api/portraits/women/9.jpg",
+      "professional": false
     },
     {
       "id": 16,
@@ -182,7 +197,8 @@
       "language": "Spanish",
       "price": 11,
       "about": "I aim to develop conversational fluency in Spanish through interactive and enjoyable lessons that encourage students to speak from day one.",
-      "image": "https://randomuser.me/api/portraits/men/7.jpg"
+      "image": "https://randomuser.me/api/portraits/men/7.jpg",
+      "professional": false
     },
     {
       "id": 17,
@@ -191,7 +207,8 @@
       "language": "French",
       "price": 13,
       "about": "I specialize in preparing students for the DELF/DALF exams, providing comprehensive lessons that cover all aspects of the exam.",
-      "image": "https://randomuser.me/api/portraits/women/10.jpg"
+      "image": "https://randomuser.me/api/portraits/women/10.jpg",
+      "professional": true
     },
     {
       "id": 18,
@@ -200,7 +217,8 @@
       "language": "German",
       "price": 10.5,
       "about": "I emphasize German grammar and writing skills in my lessons, as I believe they form the foundation for effective communication.",
-      "image": "https://randomuser.me/api/portraits/women/11.jpg"
+      "image": "https://randomuser.me/api/portraits/women/11.jpg",
+      "professional": true
     },
     {
       "id": 19,
@@ -209,7 +227,8 @@
       "language": "Spanish",
       "price": 11.5,
       "about": "With a passion for Latin American culture, I incorporate cultural insights into my lessons to enhance language learning and understanding.",
-      "image": "https://randomuser.me/api/portraits/women/12.jpg"
+      "image": "https://randomuser.me/api/portraits/women/12.jpg",
+      "professional": false
     },
     {
       "id": 20,
@@ -218,14 +237,16 @@
       "language": "French",
       "price": 12,
       "about": "With a background in international business, I offer French lessons that cater to professionals, covering business vocabulary and communication skills.",
-      "image": "https://randomuser.me/api/portraits/men/8.jpg"
+      "image": "https://randomuser.me/api/portraits/men/8.jpg",
+      "professional": false
     },
     {
       "name": "neilp",
       "description": "hello world",
       "language": "German",
       "price": 13,
-      "id": 21
+      "id": 21,
+      "professional": false
     }
   ]
 }
