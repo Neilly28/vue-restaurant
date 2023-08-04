@@ -7,7 +7,6 @@
       "id": 1
     }
   ],
-
   "restaurants": [
     {
       "id": 1,
@@ -26,6 +25,18 @@
       "name": "Savory Delights",
       "contact": "+1 (555) 123-4567",
       "address": "789 Oak Road, Villageland, USA"
+    },
+    {
+      "name": "",
+      "address": "",
+      "contact": "",
+      "id": 4
+    },
+    {
+      "name": "jolibee",
+      "address": "philcoa",
+      "contact": "9233111",
+      "id": 5
     }
   ]
 }
