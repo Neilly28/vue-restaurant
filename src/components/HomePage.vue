@@ -42,6 +42,9 @@ onMounted(async () => {
     // fetch teachers
     const response = await axios.get("http://localhost:3000/teachers");
     teachers.value = response.data;
+
+    // sort teachers by id
+    teachers.value.sort((a, b) => (a.id < b.id ? 1 : -1));
   } catch (error) {
     console.error("Error fetching data:", error);
   }

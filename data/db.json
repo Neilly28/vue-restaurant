@@ -41,22 +41,25 @@
   ],
   "teachers": [
     {
+      "id": 1,
       "name": "Lea",
       "description": "Dedicated native German teacher certified by the Goethe Institut specialized in tailor-made learning",
       "language": "German",
-      "price": 9.0,
+      "price": 9,
       "about": "I am originally from a small village in Austria and have always been fascinated by languages and cultures. I came across my calling as a teacher by coincidence when I was volunteering to teach German to refugees in 2017. Since then, I have gained extensive experience as a German teacher at language schools and in private lessons.",
       "image": "https://randomuser.me/api/portraits/women/28.jpg"
     },
     {
+      "id": 2,
       "name": "Maria",
       "description": "Certified Spanish teacher from Spain offering interactive and fun lessons",
       "language": "Spanish",
-      "price": 10.0,
+      "price": 10,
       "about": "As a native Spanish speaker, I am enthusiastic about sharing my language and culture. I use interactive activities and games to make learning Spanish enjoyable and effective.",
       "image": "https://randomuser.me/api/portraits/women/2.jpg"
     },
     {
+      "id": 3,
       "name": "Sophie",
       "description": "French teacher with a focus on conversational skills and French cuisine",
       "language": "French",
@@ -65,6 +68,7 @@
       "image": "https://randomuser.me/api/portraits/women/3.jpg"
     },
     {
+      "id": 4,
       "name": "Luis",
       "description": "Experienced Spanish teacher with a focus on grammar and communication",
       "language": "Spanish",
@@ -73,30 +77,34 @@
       "image": "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
+      "id": 5,
       "name": "Hannah",
       "description": "Experienced French teacher with a passion for French literature",
       "language": "French",
-      "price": 12.0,
+      "price": 12,
       "about": "I am passionate about French literature and culture, and I incorporate literary works into my lessons to deepen language understanding and appreciation.",
       "image": "https://randomuser.me/api/portraits/women/4.jpg"
     },
     {
+      "id": 6,
       "name": "Max",
       "description": "Experienced German teacher focused on exam preparation",
       "language": "German",
-      "price": 10.0,
+      "price": 10,
       "about": "I specialize in preparing students for German language exams, offering comprehensive lessons that cover all aspects of the exam and boost confidence.",
       "image": "https://randomuser.me/api/portraits/men/2.jpg"
     },
     {
+      "id": 7,
       "name": "Isabella",
       "description": "Spanish teacher with a focus on Latin American Spanish and culture",
       "language": "Spanish",
-      "price": 11.0,
+      "price": 11,
       "about": "As a native speaker from Argentina, I teach Latin American Spanish and provide insights into the region's diverse cultures and traditions.",
       "image": "https://randomuser.me/api/portraits/women/5.jpg"
     },
     {
+      "id": 8,
       "name": "Luc",
       "description": "Experienced French teacher with a focus on business language",
       "language": "French",
@@ -105,6 +113,7 @@
       "image": "https://randomuser.me/api/portraits/men/3.jpg"
     },
     {
+      "id": 9,
       "name": "Hannah",
       "description": "German teacher with a focus on conversation and cultural immersion",
       "language": "German",
@@ -113,14 +122,16 @@
       "image": "https://randomuser.me/api/portraits/women/6.jpg"
     },
     {
+      "id": 10,
       "name": "Carlos",
       "description": "Experienced Spanish teacher with a focus on Hispanic literature",
       "language": "Spanish",
-      "price": 12.0,
+      "price": 12,
       "about": "I have a background in Hispanic literature and love sharing literary gems with my students to deepen their understanding of Spanish language and culture.",
       "image": "https://randomuser.me/api/portraits/men/4.jpg"
     },
     {
+      "id": 11,
       "name": "Amelie",
       "description": "French teacher with a focus on pronunciation and phonetics",
       "language": "French",
@@ -129,22 +140,25 @@
       "image": "https://randomuser.me/api/portraits/women/7.jpg"
     },
     {
+      "id": 12,
       "name": "Paul",
       "description": "Experienced German teacher offering lessons for beginners and intermediate learners",
       "language": "German",
-      "price": 11.0,
+      "price": 11,
       "about": "I have been teaching German to students of all levels for more than 7 years. My approach involves interactive exercises and real-life scenarios.",
       "image": "https://randomuser.me/api/portraits/men/5.jpg"
     },
     {
+      "id": 13,
       "name": "Elena",
       "description": "Spanish teacher with a focus on immersive language learning",
       "language": "Spanish",
-      "price": 10.0,
+      "price": 10,
       "about": "I believe in immersive language learning, and my lessons include cultural activities and conversations to enhance language proficiency.",
       "image": "https://randomuser.me/api/portraits/women/8.jpg"
     },
     {
+      "id": 14,
       "name": "Francois",
       "description": "Experienced French teacher with a passion for teaching all ages",
       "language": "French",
@@ -153,6 +167,7 @@
       "image": "https://randomuser.me/api/portraits/men/6.jpg"
     },
     {
+      "id": 15,
       "name": "Anna",
       "description": "Experienced German teacher offering lessons for advanced learners",
       "language": "German",
@@ -161,22 +176,25 @@
       "image": "https://randomuser.me/api/portraits/women/9.jpg"
     },
     {
+      "id": 16,
       "name": "Antonio",
       "description": "Spanish teacher with a focus on conversational fluency",
       "language": "Spanish",
-      "price": 11.0,
+      "price": 11,
       "about": "I aim to develop conversational fluency in Spanish through interactive and enjoyable lessons that encourage students to speak from day one.",
       "image": "https://randomuser.me/api/portraits/men/7.jpg"
     },
     {
+      "id": 17,
       "name": "Camille",
       "description": "Experienced French teacher with a focus on DELF/DALF exam preparation",
       "language": "French",
-      "price": 13.0,
+      "price": 13,
       "about": "I specialize in preparing students for the DELF/DALF exams, providing comprehensive lessons that cover all aspects of the exam.",
       "image": "https://randomuser.me/api/portraits/women/10.jpg"
     },
     {
+      "id": 18,
       "name": "Julia",
       "description": "German teacher with a focus on grammar and writing skills",
       "language": "German",
@@ -185,6 +203,7 @@
       "image": "https://randomuser.me/api/portraits/women/11.jpg"
     },
     {
+      "id": 19,
       "name": "Isabel",
       "description": "Experienced Spanish teacher with a focus on Latin American culture",
       "language": "Spanish",
@@ -193,12 +212,20 @@
       "image": "https://randomuser.me/api/portraits/women/12.jpg"
     },
     {
+      "id": 20,
       "name": "Thierry",
       "description": "French teacher with a focus on business language and communication",
       "language": "French",
-      "price": 12.0,
+      "price": 12,
       "about": "With a background in international business, I offer French lessons that cater to professionals, covering business vocabulary and communication skills.",
       "image": "https://randomuser.me/api/portraits/men/8.jpg"
+    },
+    {
+      "name": "neilp",
+      "description": "hello world",
+      "language": "German",
+      "price": 13,
+      "id": 21
     }
   ]
 }
