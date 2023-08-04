@@ -11,7 +11,7 @@
     </div>
     <div>
       <form
-        class="w-96 m-auto flex flex-col items-center justify-evenly shadow-md px-6 pt-12 pb-6 text-center rounded-3xl"
+        class="w-96 m-auto flex flex-col items-center justify-evenly shadow-md px-6 pt-12 pb-6 text-center rounded-3xl bg-white"
         @submit.prevent="handleSubmit"
       >
         <div class="flex flex-col gap-6 justify-center">

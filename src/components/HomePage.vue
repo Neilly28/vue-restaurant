@@ -46,7 +46,7 @@
 
     <div class="grid grid-cols-3 gap-12 mt-12">
       <div
-        class="flex flex-col items-center justify-evenly shadow-md px-6 pt-12 pb-6 text-center rounded-3xl"
+        class="flex flex-col items-center justify-evenly shadow-md px-6 pt-12 pb-6 text-center rounded-3xl bg-white"
         v-for="teacher in filteredTeachers"
         :key="teacher.id"
       >
