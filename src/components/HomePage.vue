@@ -9,10 +9,39 @@
       teachers who specialize in teaching the foundations of German all the way
       to advanced topics.
     </p>
+
+    <div class="flex flex-col items-center justify-center gap-4">
+      <input
+        class="bg-slate-100 px-4 py-2 rounded-full"
+        type="text"
+        placeholder="Find your teacher..."
+        v-model="searchTerm"
+      />
+      <h1>{{ searchTerm }}</h1>
+      <div class="flex gap-4">
+        <select v-model="selectedLanguage">
+          <option value="">Choose Language</option>
+          <option value="German">German</option>
+          <option value="Spanish">Spanish</option>
+          <option value="French">French</option>
+        </select>
+
+        <select v-model="selectedProfession">
+          <option value="">Choose Level</option>
+          <option value="professional">Professional Teacher</option>
+          <option value="tutor">Community Tutor</option>
+        </select>
+      </div>
+    </div>
+
+    <div v-if="filteredTeachers.length === 0" class="mt-12">
+      <h1 class="text-4xl text-center">Oops, no teachers found 🥲</h1>
+    </div>
+
     <div class="grid grid-cols-3 gap-12 mt-12">
       <div
         class="flex flex-col items-center justify-evenly shadow-md p-6 text-center rounded-3xl"
-        v-for="teacher in teachers"
+        v-for="teacher in filteredTeachers"
         :key="teacher.id"
       >
         <div>
@@ -53,13 +82,46 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { onMounted, ref, computed } from "vue";
 import { useRouter } from "vue-router";
 import axios from "axios";
 const router = useRouter();
 
 const teachers = ref([]);
-const headshots = ref([]);
+const selectedLanguage = ref("");
+const selectedProfession = ref("");
+const searchTerm = ref("");
+
+// language and professional filter
+const filteredTeachers = computed(() => {
+  if (
+    !selectedLanguage.value &&
+    !selectedProfession.value &&
+    !searchTerm.value
+  ) {
+    return teachers.value;
+  } else {
+    return teachers.value.filter((teacher) => {
+      const languageMatch =
+        !selectedLanguage.value || teacher.language === selectedLanguage.value;
+      const professionMatch =
+        !selectedProfession.value ||
+        (teacher.professional && selectedProfession.value === "professional") ||
+        (!teacher.professional && selectedProfession.value === "tutor");
+      const searchMatch =
+        teacher.name
+          .replace(/\s+/g, "")
+          .toLowerCase()
+          .includes(searchTerm.value.replace(/\s+/g, "").toLowerCase()) ||
+        teacher.description
+          .replace(/\s+/g, "")
+          .toLowerCase()
+          .includes(searchTerm.value.replace(/\s+/g, "").toLowerCase());
+
+      return languageMatch && professionMatch && searchMatch;
+    });
+  }
+});
 
 // const userName = computed(() => {
 //   const user = localStorage.getItem("user");
@@ -83,11 +145,5 @@ onMounted(async () => {
   } catch (error) {
     console.error("Error fetching data:", error);
   }
-
-  // fetch headshots
-  const response = await axios.get("https://randomuser.me/api/?results=20");
-
-  headshots.value = response.data.results;
-  console.log(headshots.value);
 });
 </script>
