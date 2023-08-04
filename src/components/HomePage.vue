@@ -19,14 +19,20 @@
       />
       <h1>{{ searchTerm }}</h1>
       <div class="flex gap-4">
-        <select v-model="selectedLanguage">
+        <select
+          class="bg-slate-100 px-4 py-2 rounded-full cursor-pointer"
+          v-model="selectedLanguage"
+        >
           <option value="">Choose Language</option>
           <option value="German">German</option>
           <option value="Spanish">Spanish</option>
           <option value="French">French</option>
         </select>
 
-        <select v-model="selectedProfession">
+        <select
+          class="bg-slate-100 px-4 py-2 rounded-full cursor-pointer"
+          v-model="selectedProfession"
+        >
           <option value="">Choose Level</option>
           <option value="professional">Professional Teacher</option>
           <option value="tutor">Community Tutor</option>
@@ -35,12 +41,12 @@
     </div>
 
     <div v-if="filteredTeachers.length === 0" class="mt-12">
-      <h1 class="text-4xl text-center">Oops, no teachers found 🥲</h1>
+      <h1 class="text-4xl text-center font-bold">Oops, no teachers found 🥲</h1>
     </div>
 
     <div class="grid grid-cols-3 gap-12 mt-12">
       <div
-        class="flex flex-col items-center justify-evenly shadow-md p-6 text-center rounded-3xl"
+        class="flex flex-col items-center justify-evenly shadow-md px-6 pt-12 pb-6 text-center rounded-3xl"
         v-for="teacher in filteredTeachers"
         :key="teacher.id"
       >
