@@ -9,40 +9,43 @@
   </div>
 </template>
 
-<script>
-import { ref } from "vue";
+<script setup>
+import { onMounted, ref } from "vue";
 import axios from "axios";
+import { useRouter } from "vue-router";
 
-export default {
-  name: "SignUp",
-  setup() {
-    const name = ref("");
-    const email = ref("");
-    const password = ref("");
+const name = ref("");
+const email = ref("");
+const password = ref("");
+const router = useRouter();
 
-    async function signUp() {
-      try {
-        const response = await axios.post("http://localhost:3000/users", {
-          email: email.value,
-          password: password.value,
-          name: name.value,
-        });
+async function signUp() {
+  try {
+    const response = await axios.post("http://localhost:3000/users", {
+      email: email.value,
+      password: password.value,
+      name: name.value,
+    });
+    console.log({ response });
 
-        if (response.status === 201) {
-          alert("You are signed up!");
-          localStorage.setItem("user", JSON.stringify(response.data));
-        } else {
-          alert("Sign up failed! Please try again later.");
-        }
-      } catch (error) {
-        alert("An error occured. Please try again later.");
-        console.log(error);
-      }
+    if (response.status === 201) {
+      localStorage.setItem("user", JSON.stringify(response.data));
+      router.push({ name: "HomePage" });
+    } else {
+      alert("Sign up failed! Please try again later.");
     }
+  } catch (error) {
+    alert("An error occured. Please try again later.");
+    console.log(error);
+  }
+}
 
-    return { name, email, password, signUp };
-  },
-};
+onMounted(() => {
+  const user = localStorage.getItem("user");
+  if (user) {
+    router.push({ name: "HomePage" });
+  }
+});
 </script>
 
 <style lang="scss" scoped></style>
