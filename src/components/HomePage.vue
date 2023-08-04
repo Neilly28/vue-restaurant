@@ -1,18 +1,26 @@
 <template>
-  <h1>Start learning with one of our top teachers!</h1>
-  <p>
-    There isn't a single way to teach a language. Book a regular lesson or a
-    trial lessons to get an introduction to a teacher's style. We have teachers
-    who specialize in teaching the foundations of German all the way to advanced
-    topics.
-  </p>
-  <div class="grid">
-    <div v-for="teacher in teachers" :key="teacher.id">
-      <img :src="teacher.image" alt="" />
-      <h2>{{ teacher.name }}</h2>
-      <h4>{{ teacher.language }}</h4>
-      <p>{{ teacher.description }}</p>
-      <h3>EUR {{ teacher.price.toFixed(2) }}</h3>
+  <div>
+    <h1 class="text-5xl font-bold mt-12 mb-8">
+      Start learning with one of our top teachers!
+    </h1>
+    <p class="text-lg mb-24">
+      There isn't a single way to teach a language. Book a regular lesson or a
+      trial lessons to get an introduction to a teacher's style. We have
+      teachers who specialize in teaching the foundations of German all the way
+      to advanced topics.
+    </p>
+    <div class="grid grid-cols-3 gap-12 mt-12">
+      <div
+        class="flex flex-col gap-2 items-center justify-center shadow-md p-6 text-center"
+        v-for="teacher in teachers"
+        :key="teacher.id"
+      >
+        <img class="rounded-full w-24" :src="teacher.image" alt="" />
+        <h2 class="text-2xl font-bold">{{ teacher.name }}</h2>
+        <h4>{{ teacher.language }}</h4>
+        <p>{{ teacher.description }}</p>
+        <h3 class="font-bold text-xl">EUR {{ teacher.price.toFixed(2) }}</h3>
+      </div>
     </div>
   </div>
 </template>
@@ -56,33 +64,3 @@ onMounted(async () => {
   console.log(headshots.value);
 });
 </script>
-
-<style lang="scss" scoped>
-p {
-  font-size: 14px;
-  margin-bottom: 48px;
-}
-.grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.075);
-    padding: 12px;
-
-    img {
-      border-radius: 99px;
-      width: 72px;
-    }
-
-    p {
-      font-size: 14px;
-    }
-  }
-}
-</style>
