@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "name": "Neil",
+      "email": "neilpilarca@gmail.com",
+      "password": "neil1234",
+      "id": 1
+    },
+    {
+      "email": "dsad",
+      "password": "addd",
+      "name": "dsad",
+      "id": 2
+    },
+    {
+      "email": "dasdd",
+      "password": "dddd",
+      "name": "dsad",
+      "id": 3
+    },
+    {
+      "email": "aaaa",
+      "password": "aaa",
+      "name": "aaaa",
+      "id": 4
+    },
+    {
+      "email": "ccc",
+      "password": "ccc",
+      "name": "ccc",
+      "id": 5
+    },
+    {
+      "email": "dasd",
+      "password": "dasdsd",
+      "name": "dsad",
+      "id": 6
+    },
+    {
+      "email": "",
+      "password": "",
+      "name": "",
+      "id": 7
+    }
+  ]
+}
