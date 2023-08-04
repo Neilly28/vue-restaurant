@@ -7,6 +7,9 @@
     <input type="password" v-model="password" placeholder="ilovedonuts" />
     <button @click="signUp">Sign Up</button>
   </div>
+  <div>
+    <router-link to="/login">Login</router-link>
+  </div>
 </template>
 
 <script setup>

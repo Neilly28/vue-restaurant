@@ -1,8 +1,13 @@
 <template>
-  <div><h1>Welcome Homess!</h1></div>
+  <div>
+    <HeaderView />
+
+    <h1>Welcome Homess!</h1>
+  </div>
 </template>
 
 <script setup>
+import HeaderView from "./HeaderView.vue";
 import { onMounted } from "vue";
 import { useRouter } from "vue-router";
 const router = useRouter();
