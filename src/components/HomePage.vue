@@ -91,9 +91,7 @@
 
 <script setup>
 import { onMounted, ref, computed } from "vue";
-import { useRouter } from "vue-router";
 import axios from "axios";
-const router = useRouter();
 
 const teachers = ref([]);
 const selectedLanguage = ref("");
@@ -131,25 +129,11 @@ const filteredTeachers = computed(() => {
   }
 });
 
-// const userName = computed(() => {
-//   const user = localStorage.getItem("user");
-//   return user ? JSON.parse(user).name : "Guest";
-// });
-
 onMounted(async () => {
   try {
-    // fetch user from local storage
-    const user = localStorage.getItem("user");
-    if (!user) {
-      router.push("/signup");
-    }
-
     // fetch teachers
     const response = await axios.get("http://localhost:3000/teachers");
     teachers.value = response.data;
-
-    // sort teachers by id
-    // teachers.value.sort((a, b) => (a.id < b.id ? 1 : -1));
   } catch (error) {
     console.error("Error fetching data:", error);
   }

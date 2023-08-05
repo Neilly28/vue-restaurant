@@ -9,11 +9,12 @@ import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 
+// import store
+import store from "./store/index";
+
 const vuetify = createVuetify({
   components,
   directives,
 });
 
-const app = createApp(App);
-app.use(router);
-app.mount("#app").use(vuetify);
+createApp(App).use(router).use(store).use(vuetify).mount("#app");
