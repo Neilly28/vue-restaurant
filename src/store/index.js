@@ -2,12 +2,18 @@ import { createStore } from "vuex";
 
 // firebase imports
 import { auth } from "../firebase/config";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  signOut,
+  onAuthStateChanged,
+} from "firebase/auth";
 
 const store = createStore({
   // your initial state
   state: {
     user: null,
+    authIsReady: false,
   },
 
   //   mutations are needed to update state
@@ -15,6 +21,9 @@ const store = createStore({
     setUser(state, payload) {
       state.user = payload;
       console.log("user state changed:", state.user);
+    },
+    setAuthIsReady(state, payload) {
+      state.authIsReady = payload;
     },
   },
 
@@ -36,7 +45,34 @@ const store = createStore({
         throw new Error("Could not complete signup!");
       }
     },
+
+    async login(context, { email, password }) {
+      console.log("login action run!");
+
+      // async code
+      const response = await signInWithEmailAndPassword(auth, email, password);
+
+      if (response) {
+        context.commit("setUser", response.user);
+      } else {
+        throw new Error("Could not complete login!");
+      }
+    },
+
+    async logout(context) {
+      console.log("logout action ran!");
+
+      // async code
+      await signOut(auth);
+      context.commit("setUser", null);
+    },
   },
+});
+
+const unsub = onAuthStateChanged(auth, (user) => {
+  store.commit("setAuthIsReady", true);
+  store.commit("setUser", user);
+  unsub();
 });
 
 // export store

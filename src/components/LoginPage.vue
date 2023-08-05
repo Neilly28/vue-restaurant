@@ -23,17 +23,33 @@
         />
       </div>
       <button>Login</button>
+      <div v-if="error">{{ error }}</div>
     </div>
   </form>
 </template>
 
 <script setup>
 import { ref } from "vue";
+import { useStore } from "vuex";
+import { useRouter } from "vue-router";
+
+const store = useStore();
+const router = useRouter();
 
 const email = ref("");
 const password = ref("");
+const error = ref(null);
 
-const handleSubmit = () => {
-  console.log(email.value, password.value);
+const handleSubmit = async () => {
+  try {
+    await store.dispatch("login", {
+      email: email.value,
+      password: password.value,
+    });
+    console.log("after login dispatched");
+    router.push("/");
+  } catch (err) {
+    error.value = err.message;
+  }
 };
 </script>
