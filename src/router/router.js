@@ -1,9 +1,8 @@
 import DefaultLayout from "@/components/DefaultLayout.vue";
-import HomePage from "@/components/HomePage.vue";
-import SignUp from "@/components/SignUp.vue";
-import LoginPage from "@/components/LoginPage.vue";
-import AddResturant from "@/components/AddRestaurant.vue";
-import UpdateRestaurant from "@/components/UpdateRestaurant.vue";
+import Home from "../views/Home.vue";
+import SignUp from "../views/SignUp.vue";
+import Login from "../views/Login.vue";
+import SignUpTeacher from "../views/SignUpTeacher.vue";
 
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -14,8 +13,8 @@ const routes = [
     children: [
       {
         path: "/",
-        name: "HomePage",
-        component: HomePage,
+        name: "Home",
+        component: Home,
       },
       {
         path: "/signup",
@@ -24,18 +23,13 @@ const routes = [
       },
       {
         path: "/login",
-        name: "LoginPage",
-        component: LoginPage,
+        name: "Login",
+        component: Login,
       },
       {
-        path: "/add",
-        name: "AddResturant",
-        component: AddResturant,
-      },
-      {
-        path: "/update",
-        name: "UpdateRestaurant",
-        component: UpdateRestaurant,
+        path: "/signup-teacher",
+        name: "SignUpTeacher",
+        component: SignUpTeacher,
       },
     ],
   },

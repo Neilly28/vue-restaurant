@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  /* Vanilla CSS equivalent */
+  background-image: url("../public/background.png");
+  background-repeat: space;
+  /* background-position: right bottom; */
+}

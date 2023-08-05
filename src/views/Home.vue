@@ -91,12 +91,17 @@
 
 <script setup>
 import { onMounted, ref, computed } from "vue";
+import { useStore } from "vuex";
 import axios from "axios";
 
 const teachers = ref([]);
 const selectedLanguage = ref("");
 const selectedProfession = ref("");
 const searchTerm = ref("");
+const store = useStore();
+
+const user = computed(() => store.state.user);
+console.log(user);
 
 // language and professional filter
 const filteredTeachers = computed(() => {
