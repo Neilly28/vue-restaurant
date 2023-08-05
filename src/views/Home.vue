@@ -12,36 +12,33 @@
       </p>
     </div>
 
-    <div class="flex flex-col items-center justify-center gap-4">
+    <!-- SEARCH FILTERS -->
+    <div class="flex items-center justify-center gap-4">
       <input
         class="bg-slate-100 px-4 py-2 rounded-full"
         type="text"
-        placeholder="Find your teacher..."
+        placeholder="🔎 Find your teacher..."
         v-model="searchTerm"
       />
-      <h1>{{ searchTerm }}</h1>
-      <div class="flex gap-4">
-        <select
-          class="bg-slate-100 px-4 py-2 rounded-full cursor-pointer"
-          v-model="selectedLanguage"
-        >
-          <option value="">Choose Language</option>
-          <option value="German">German</option>
-          <option value="Spanish">Spanish</option>
-          <option value="French">French</option>
-        </select>
+      <select
+        class="bg-slate-100 px-4 py-2 rounded-full cursor-pointer"
+        v-model="selectedLanguage"
+      >
+        <option value="">Choose Language</option>
+        <option value="German">German</option>
+        <option value="Spanish">Spanish</option>
+        <option value="French">French</option>
+      </select>
 
-        <select
-          class="bg-slate-100 px-4 py-2 rounded-full cursor-pointer"
-          v-model="selectedProfession"
-        >
-          <option value="">Choose Level</option>
-          <option value="professional">Professional Teacher</option>
-          <option value="tutor">Community Tutor</option>
-        </select>
-      </div>
+      <select
+        class="bg-slate-100 px-4 py-2 rounded-full cursor-pointer"
+        v-model="selectedProfession"
+      >
+        <option value="">Choose Level</option>
+        <option value="professional">Professional Teacher</option>
+        <option value="tutor">Community Tutor</option>
+      </select>
     </div>
-
     <div v-if="filteredTeachers.length === 0" class="mt-12">
       <h1 class="text-4xl text-center font-bold">Oops, no teachers found 🥲</h1>
     </div>

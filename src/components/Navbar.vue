@@ -3,12 +3,12 @@
     <div class="flex items-center justify-between mt-12 mb-24 font-bold">
       <!-- FOR ALL USERS -->
       <router-link class="hover:text-cyan-400 transition-all ease-in" to="/"
-        >Home</router-link
+        >🏡Home</router-link
       >
       <router-link
         class="hover:text-cyan-400 transition-all ease-in"
         to="/apply"
-        >Become A Teacher</router-link
+        >💪🏻Become A Teacher</router-link
       >
 
       <!-- FOR LOGGED IN USERS -->
@@ -16,7 +16,7 @@
         <router-link
           class="hover:text-cyan-400 transition-all ease-in"
           to="/user"
-          >Hello, {{ user.email }}</router-link
+          >👋🏻Hello, {{ user.email }}</router-link
         >
       </div>
 

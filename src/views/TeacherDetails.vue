@@ -21,6 +21,12 @@
             >{{ teacher.language }}</span
           >
         </div>
+        <svg-icon
+          :type="iconType"
+          :path="iconPath"
+          @click="toggleFavorite"
+          :class="favorite ? 'text-red-400' : 'text-slate-400'"
+        ></svg-icon>
       </div>
       <div>
         <p class="text-sm text-left">{{ teacher.description }}</p>
@@ -63,6 +69,12 @@ import axios from "axios";
 
 const route = useRoute();
 const teacher = ref({});
+import SvgIcon from "@jamescoyle/vue-icon";
+import { mdiHeart } from "@mdi/js";
+
+const iconType = "mdi";
+const iconPath = ref(mdiHeart);
+const favorite = ref(false);
 
 onMounted(async () => {
   try {
@@ -71,10 +83,40 @@ onMounted(async () => {
       `http://localhost:3000/teachers/${route.params.id}`
     );
     teacher.value = response.data;
+
+    // Check if the teacher is in the list of favorite teachers
+    favorite.value = favoriteTeachers.some((t) => t.id === teacher.value.id);
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 });
+
+// Initialize favoriteTeachers array from local storage or create an empty array
+let favoriteTeachers =
+  JSON.parse(localStorage.getItem("favoriteTeachers")) || [];
+
+const toggleFavorite = () => {
+  favorite.value = !favorite.value;
+
+  if (favorite.value) {
+    // Add teacher to favoriteTeachers array if it's not already added
+    if (!favoriteTeachers.some((t) => t.id === teacher.value.id)) {
+      favoriteTeachers.push(teacher.value);
+      // Save updated favoriteTeachers array to local storage
+      localStorage.setItem(
+        "favoriteTeachers",
+        JSON.stringify(favoriteTeachers)
+      );
+    }
+  } else {
+    // Remove teacher from favoriteTeachers array if it's already added
+    favoriteTeachers = favoriteTeachers.filter(
+      (t) => t.id !== teacher.value.id
+    );
+    // Save updated favoriteTeachers array to local storage
+    localStorage.setItem("favoriteTeachers", JSON.stringify(favoriteTeachers));
+  }
+};
 </script>
 
 <style lang="scss" scoped></style>
