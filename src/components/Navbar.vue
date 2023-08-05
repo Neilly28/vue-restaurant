@@ -12,16 +12,13 @@
         to="/signup-teacher"
         >Become A Teacher</router-link
       >
-      <a
-        class="flex items-center justify-center gap-2 hover:text-cyan-400 transition-all ease-in"
-        href="https://github.com/Neilly28/vue-restaurant"
-        target="_blank"
-        >GitHub<svg-icon type="mdi" :path="path"
-      /></a>
 
       <!-- FOR LOGGED IN USERS -->
       <div v-if="user">
-        <span>Logged in as {{ user.email }}</span>
+        <router-link to="/user">Hello, {{ user.email }}</router-link>
+      </div>
+
+      <div v-if="user">
         <button @click="handleClick">Logout</button>
       </div>
 
@@ -30,6 +27,14 @@
         <router-link to="/login">Login</router-link>
         <router-link to="/signup">Sign Up</router-link>
       </div>
+
+      <!-- GitHub -->
+      <a
+        class="flex items-center justify-center gap-2 hover:text-cyan-400 transition-all ease-in"
+        href="https://github.com/Neilly28/vue-restaurant"
+        target="_blank"
+        >GitHub<svg-icon type="mdi" :path="path"
+      /></a>
     </div>
   </nav>
 </template>

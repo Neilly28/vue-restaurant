@@ -48,41 +48,37 @@
 
     <div class="grid grid-cols-3 gap-12 mt-12">
       <div
-        class="flex flex-col items-center justify-evenly shadow-md px-6 pt-12 pb-6 text-center rounded-3xl bg-white"
+        class="flex flex-col items-start justify-around gap-4 shadow-md px-6 pt-12 pb-6 rounded-3xl bg-white"
         v-for="teacher in filteredTeachers"
         :key="teacher.id"
       >
+        <div class="flex gap-2">
+          <img class="rounded-full w-24" :src="teacher.image" alt="" />
+          <div class="text-left flex flex-col items-start justify-center">
+            <h2 class="text-2xl font-bold">{{ teacher.name }}</h2>
+            <h2 class="text-sm text-slate-400">
+              {{
+                teacher.professional
+                  ? "Professional Teacher"
+                  : "Community Tutor"
+              }}
+            </h2>
+            <span
+              class="mt-2 border-transparent px-2 py-1 rounded-3xl text-xs font-semibold text-cyan-800 bg-cyan-200"
+              >{{ teacher.language }}</span
+            >
+          </div>
+        </div>
+
         <div>
-          <div class="flex items-center justify-evenly mb-2">
-            <img class="rounded-full w-24" :src="teacher.image" alt="" />
-            <div class="text-left flex flex-col gap-1">
-              <h2 class="text-2xl font-bold">{{ teacher.name }}</h2>
-              <p class="text-slate-400">
-                {{
-                  teacher.professional
-                    ? "Professional Teacher"
-                    : "Community Tutor"
-                }}
-              </p>
-              <div class="mb-4">
-                <span
-                  class="border-transparent px-2 py-1 rounded-3xl text-xs font-semibold text-cyan-800 bg-cyan-200"
-                  >{{ teacher.language }}</span
-                >
-              </div>
-            </div>
-          </div>
+          <p class="text-sm text-left">{{ teacher.description }}</p>
+        </div>
+        <div>
+          <p class="text-sm text-left text-slate-400">Trial from</p>
 
-          <div class="mb-4">
-            <p class="text-sm text-left">{{ teacher.description }}</p>
-          </div>
-          <div>
-            <p class="text-sm text-left text-slate-400">Trial from</p>
-
-            <h3 class="font-bold text-xl text-left">
-              EUR {{ teacher.price.toFixed(2) }}
-            </h3>
-          </div>
+          <h3 class="font-bold text-xl text-left">
+            EUR {{ teacher.price.toFixed(2) }}
+          </h3>
         </div>
       </div>
     </div>
