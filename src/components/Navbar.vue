@@ -1,31 +1,46 @@
 <template>
   <nav v-if="authIsReady">
     <div class="flex items-center justify-between mt-12 mb-24 font-bold">
-      <!-- LOGO -->
-      <router-link to="/"
-        ><img class="w-56" src="logo.png" alt="logo"
-      /></router-link>
-
       <!-- FOR ALL USERS -->
+      <router-link class="hover:text-cyan-400 transition-all ease-in" to="/"
+        >Home</router-link
+      >
       <router-link
         class="hover:text-cyan-400 transition-all ease-in"
-        to="/signup-teacher"
+        to="/apply"
         >Become A Teacher</router-link
       >
 
       <!-- FOR LOGGED IN USERS -->
       <div v-if="user">
-        <router-link to="/user">Hello, {{ user.email }}</router-link>
+        <router-link
+          class="hover:text-cyan-400 transition-all ease-in"
+          to="/user"
+          >Hello, {{ user.email }}</router-link
+        >
       </div>
 
       <div v-if="user">
-        <button @click="handleClick">Logout</button>
+        <button
+          class="hover:text-cyan-400 transition-all ease-in"
+          @click="handleClick"
+        >
+          Logout
+        </button>
       </div>
 
       <!-- FOR LOGGED OUT USERS -->
       <div v-if="!user">
-        <router-link to="/login">Login</router-link>
-        <router-link to="/signup">Sign Up</router-link>
+        <router-link
+          class="hover:text-cyan-400 transition-all ease-in"
+          to="/login"
+          >Login</router-link
+        >
+        <router-link
+          class="hover:text-cyan-400 transition-all ease-in"
+          to="/signup"
+          >Sign Up</router-link
+        >
       </div>
 
       <!-- GitHub -->

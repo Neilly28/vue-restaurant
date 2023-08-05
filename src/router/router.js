@@ -2,8 +2,9 @@ import DefaultLayout from "@/components/DefaultLayout.vue";
 import Home from "../views/Home.vue";
 import SignUp from "../views/SignUp.vue";
 import Login from "../views/Login.vue";
-import SignUpTeacher from "../views/SignUpTeacher.vue";
 import UserProfile from "../views/UserProfile.vue";
+import TeacherDetails from "../views/TeacherDetails.vue";
+import Apply from "../views/Apply.vue";
 
 import { createRouter, createWebHistory } from "vue-router";
 
@@ -28,14 +29,20 @@ const routes = [
         component: Login,
       },
       {
-        path: "/signup-teacher",
-        name: "SignUpTeacher",
-        component: SignUpTeacher,
+        path: "/apply",
+        name: "Apply",
+        component: Apply,
       },
       {
         path: "/user",
         name: "UserProfile",
         component: UserProfile,
+      },
+      {
+        path: "/teacher/:id",
+        name: "TeacherDetails",
+        component: TeacherDetails,
+        props: true,
       },
     ],
   },
