@@ -48,7 +48,7 @@
 
     <div class="grid grid-cols-3 gap-12 mt-12">
       <div
-        class="flex flex-col items-start justify-around gap-4 shadow-md px-6 pt-12 pb-6 rounded-3xl bg-white"
+        class="group cursor-pointer flex flex-col items-start justify-around gap-4 shadow-md px-6 pt-12 pb-6 rounded-3xl bg-white"
         v-for="teacher in filteredTeachers"
         :key="teacher.id"
       >
@@ -73,12 +73,19 @@
         <div>
           <p class="text-sm text-left">{{ teacher.description }}</p>
         </div>
-        <div>
-          <p class="text-sm text-left text-slate-400">Trial from</p>
+        <div class="flex items-center justify-evenly gap-4">
+          <div>
+            <p class="text-sm text-left text-slate-400">Trial from</p>
+            <h3 class="font-bold text-xl text-left">
+              EUR {{ teacher.price.toFixed(2) }}
+            </h3>
+          </div>
 
-          <h3 class="font-bold text-xl text-left">
-            EUR {{ teacher.price.toFixed(2) }}
-          </h3>
+          <button
+            class="bg-red-400 text-white font-bold px-4 py-2 rounded-full cursor-pointer opacity-0 group-hover:opacity-100 ease-in-out duration-300"
+          >
+            Book a class
+          </button>
         </div>
       </div>
     </div>
